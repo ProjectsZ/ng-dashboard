@@ -4,28 +4,25 @@ import { NgModule } from '@angular/core';
 /* Rutes */
 import { app_routing } from './app.routes';
 
+/* Modules */
+import { PaginasModule } from './pages/paginas.module';
+
+/* Components */
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component';
 import { LoginComponent } from './login/login.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { PaginasComponent } from './pages/paginas.component';
-import { GraphicsComponent } from './pages/graphics/graphics.component';
+import { RegisterComponent } from './login/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    NopagefoundComponent,
     LoginComponent,
-    ProgressComponent,
-    PaginasComponent,
-    GraphicsComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    app_routing
+    app_routing,
+    PaginasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
