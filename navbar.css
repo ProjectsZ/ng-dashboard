@@ -1,0 +1,40 @@
+html{
+    margin: 0; padding:0;
+}
+nav{
+    position: relative;
+}
+*{
+    margin: 0; padding: 0;
+}
+
+.navbar{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    border: 1px solid #000;
+}
+
+.navbar div{
+    display: flex; align-content: center; align-items: center;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+.navbar ul li{
+    border: none;
+    display: flex;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    padding: 10px;
+}
+
+#search{
+    background: grey;
+}

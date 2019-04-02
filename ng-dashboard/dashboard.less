@@ -1,0 +1,308 @@
+@import "../assets/css/varColors.less";
+
+@bg1: @light-blue_A400;
+@bg2: @light-blue_A700;
+@c1:  @light-blue_100;
+@c2:  @blue-grey_900;
+
+@desktop: ~"only screen and (min-width: 960px) and (max-width: 1199px)";
+@tablet:  ~"only screen and (min-width: 600px) and (max-width: 959px)";
+@mobil:   ~"only screen and (min-width: 0px) and (max-width: 599px)";
+
+
+//menu top
+.top-title{
+    padding: 6px;
+    background: @blue-grey_900;
+    color: @grey_100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+}
+        
+
+.dashboard{
+    background: @white;
+    color: @grey_50;
+    display: flex;
+    
+    //content left
+    .nav-bar{
+        background: @bg1;
+        height: 100% + 18px;
+		
+        .top-business{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 45px;
+            background: @c2;
+			position: fixed;
+			width: 250px;
+			z-index: 1;
+            
+            @media @mobil{
+				width: 60px;
+                .name_b{
+                    .logo{
+                        content: '';
+                        position: absolute;
+                        width: 35px; height: 35px;
+                        background: url(img/ICONO_PS.png) no-repeat;
+                        background-position: left;
+                        top: 4px; left: 2px;
+                    }
+                    i:nth-child(2){
+                        display: none;
+                    }
+                }
+                .menu_view{
+                    margin-left: 35px;
+                }
+            }
+        }
+        
+        .mini-info-perfil{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2.8em; padding-bottom: 2.5em;
+            background: @bg2;
+            margin-top: 45px;
+
+            img{
+                //  foto usuario
+                width: 4.5em;
+                padding: 0.5em;
+                
+                @media @mobil{
+                    width: 4em;
+                    padding-left: 1em;
+                }
+            }
+            ul{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                line-height: 14px;
+              li{
+                 display: block;
+                  
+              }
+                li:nth-child(1){
+                    font-size: 9px;
+                    text-align: center;
+                    font-family: 'Roboto Thin', monospace;
+                }
+                @media @mobil{
+                    li:nth-child(1), li:nth-child(2){ display: none; }
+                    li:nth-child(3) span{
+                        display: none;
+                    }
+                }
+            }
+            .online{
+             padding-left: 0.8em;
+                font-size: 9px;
+                text-align: center;
+                font-family: 'Roboto Thin', monospace;
+                
+                &:after{
+                    content: '';
+                    position: absolute;
+                    margin-top: 0.4em;
+                    margin-left: -30px;
+                    background: @teal_A400;
+                    width: 0.5em; height: 0.5em;
+                    border-radius: 50%;
+                }
+                
+                @media @mobil{
+                    &:after{
+                        position: absolute;
+                        right: 16px;
+                        top: -18px;
+                    }
+                }
+            }
+        }
+        li[class^="menu"] a{
+            // menus
+//            display: flex;
+//            align-items: center;
+            padding: 0.5rem;
+            color: @c1;
+            display: block;
+			font-family: "Roboto Bold", monospace;
+			opacity: 0.9;
+            
+            svg{ margin-right: 0.3rem;fill: @c1; }
+            
+            &:hover{
+                background: @bg2;
+                color: @c2;
+                svg{
+                    fill: @blue-grey_800;
+                }
+            }
+            
+            @media @mobil{
+                display: flex;
+                align-items: center;
+                padding-left: 15px;
+                span{ display: none; }
+            }
+			div{ display: flex; align-items: center; }
+        }
+        li>input{
+            border: none; width: 200px;
+            margin: .5rem;
+            border-radius: 4px;
+            padding: .6rem;
+            text-align: center; letter-spacing: 0.03rem;
+            color: @c2;
+            outline: none;
+            background: @bg2;
+            font-size: 1.1rem;
+            
+            &::placeholder{
+                background: @bg2;
+                background: url(img/ic_search.svg) no-repeat;
+                opacity: 0.6;
+                background-position: left;
+                align-items: center;
+                color: @c1;
+                font-family: "Roboto thin";
+            }
+            
+            &:hover, &:focus{
+                background: @c1;
+                &::placeholder{
+                background: @c1;
+                    color: @c2;
+                }
+
+            }
+            
+            @media @mobil{
+                width: 40px; height: 45px;
+                cursor: pointer;
+                background: none;
+                margin: 0; margin-left: 65px;
+                border-radius: 0px;
+                position: absolute; top: 0px;
+                
+                
+                &::placeholder{ color: transparent; }
+                &:hover, &:focus{
+                    background: @bg2; width: 100%;
+                    top: 0;
+                    &::placeholder{ background: @bg2; }
+                }
+            }
+        }
+        
+    }
+    
+    //content right
+    .data-content{
+        width: 100%;
+        
+        .navbar.top-title{
+            display: flex;
+            justify-content: center;
+            position: fixed;
+        }
+        
+        .content{
+            padding: 1rem;
+            padding-top: 0.8rem;
+			margin-top: 48px;
+            .ajustado{
+                display: flex;
+                justify-content: space-between;
+                 
+                    .card-total{
+                        height: 150px;
+                        width: 100%;
+                        margin-right: 8px;
+                        padding-left: 8%; padding-right: 8%;
+                        display: flex;
+                        text-align: center;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 10px;
+
+                        &:nth-child(1){ background: @purple_600; }
+                        &:nth-child(2){ background: @red_600; }
+                        &:nth-child(3){ background: @orange_500; }
+                    }
+                
+           }
+            
+            h6{
+                display: block;
+                color: @blue-grey_800;
+                left: 0;
+            }
+            .card-total h5{
+                color: @white;
+                line-height: 10px;
+            }
+            
+            .c-posts,.c-likes{
+                display: block;
+                width: 66.5%;
+                
+                
+                .capa{
+                    display: flex;
+                    justify-content: space-between; 
+                    
+                    .card-total{
+                        width: 100%;
+                        padding-left: 8%; padding-right: 8%;
+                        
+                        &:nth-child(1){ background: @blue_500; }
+                        &:nth-child(2){ background: @green_400; }
+                    }
+                }
+            }
+            .c-likes{
+                width: 33.5%;
+                
+                .card-total{
+                    background: @red_400 !important;
+                }
+            }
+            .ajustado.members, .ajustado.tasks{
+                display: block;
+            }
+            .c-members, .c-tasks{
+                width: 100%;
+                display: flex; justify-content: space-between;
+                
+                .card-total{
+                    &:nth-child(1){ background: @brown_300; }
+                    &:nth-child(2){ background: @amber_600; }
+                }
+            }
+            
+            .c-tasks{
+                .card-total{
+                    &:nth-child(1){ background: @teal_A700; }
+                    &:nth-child(2){ background: @blue-grey_400; }
+                }
+            }
+            
+            
+        }
+        
+    }
+}
+
+
+

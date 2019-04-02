@@ -1,0 +1,140 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Dashboard</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="assets/css/material-pe.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet/less" type="text/css" href="dashboard.less" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+</head>
+<body>
+    <div class="dashboard">
+       
+<!--  Navegando -->
+        <ul class="nav-bar">
+            <li class="top-business">
+                <span class="name_b"> <i class="logo"></i> <i>SkyRider</i> </span>
+                <a href="#" class="menu_view">
+                	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path fill="#fafafa" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                </a>
+            </li>
+            <li class="mini-info-perfil">
+                <img src="img/ic_user.svg" alt="icon-photo">
+                <ul>
+                    <li> Wellcome </li>
+                    <li> Fred Pizarro </li>
+                    <li class="online"> <span>Online</span> </li>
+                </ul>
+            </li>
+            
+            <li> <input type="text" placeholder="Search ..."> </li>
+            
+            <li class="menu"><a href=""> 
+                 <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg> <span>Dashboard</span>
+                 </div> </a></li>
+                       
+            <li class="menu"><a href="">
+            	<div>
+            		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> <span>Chat</span>
+            	</div> </a></li>
+            
+            <li class="menu"><a href="">
+            	<div>
+            		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 19c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM6 1c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12-8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-6 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg> <span>Intercom Groups</span>
+            	</div>
+             </a></li>
+            
+            <li class="menu"><a href="">
+            	<div>
+            		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 10H7v2h10v-2zm2-7h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zm-5-5H7v2h7v-2z"/></svg> <span>Tasks</span>
+            	</div>
+            </a></li>
+            
+        </ul>
+        
+<!--        Informacion-->
+        <div class="data-content">
+
+            <!--   navbar.component-->
+            <nav class="navbar top-title">
+                <ul>
+                    <li>
+                        Dashboard
+                    </li>
+                </ul>
+            </nav>
+
+            <!--  dashboard.component-->
+            <div class="content">
+                <div class="ajustado full">
+                    <div class="card-total">
+                        <h5>50</h5>
+                        <span>Total Groups</span>
+                    </div>
+                    <div class="card-total">
+                        <span>Marketing</span>
+                        <span> Most Active Group</span>
+                    </div>
+                    <div class="card-total">
+                        <span>Sales Group</span>
+                        <span>Least Active Group</span>
+                    </div>
+                </div>
+                <div class="ajustado">
+                    <div class="c-posts">
+                        <h6>Posts</h6>
+                        <div class="capa">
+                            <div class="card-total">
+                                <h5> 435 </h5>
+                                <span> Total Post </span>
+                            </div>
+                            <div class="card-total">
+                                <h5> 12 </h5>
+                                <span> Todays post </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-likes">
+                        <h6> Likes </h6>
+                        <div class="card-total">
+                            <h5> 1148 </h5>
+                            <span> Total Like </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ajustado members">
+                    <h6>Members</h6>
+                    <div class="c-members">
+                        <div class="card-total">
+                            <h5> 89 </h5>
+                            <span> Total Members </span>
+                        </div>
+                        <div class="card-total">
+                            <h5> 5 </h5>
+                            <span> Pending Members </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ajustado tasks">
+                    <h6> Tasks </h6>
+                    <div class="c-tasks">
+                        <div class="card-total">
+                            <h5> 1375 </h5>
+                            <span> Total Tasks </span>
+                        </div>
+                        <div class="card-total">
+                            <h5> 235 </h5>
+                            <span> Todays task </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
